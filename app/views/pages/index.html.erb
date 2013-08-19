@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
 
-    <div class="container">
-      <h1>Hello</h1>
+  <div class="container">
     <div class="cover">
-      <img src="p.jpg">
+      <img src="/assets/banner.jpg">
     </div>
     <div class="profileImage">
-      <img src="p2.jpg">
+      <img src="/assets/profile.jpg">
     </div>
+    <div class="row">
 
-    <div class="about">
-      <ul>
-        <li>Background</li>
-        <li>Address</li>
-        <% for u in @user %>
+      <div class="span4 profile">
+        <div class="about">
+          <ul>
+            <li>Background</li>
+            <li>Address</li>
+            <% for u in @user %>
             <p><%= u.first_name %></p> <br>
-        <% end %>
-      </ul>
-    </div>
-    <div class="timeline">
-      <div class="post">
-        <div class="username">
-          <img src="p2.jpg">
-          <p>Sivabudh Umpudh</p> 
+            <% end %>
+          </ul>
         </div>
-         <div class="content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, provident, quos corrupti labore nihil quo minus aliquam enim maxime eum dolor vitae quam doloremque velit in veniam esse deserunt ratione cum iure vel laudantium temporibus reprehenderit illum assumenda nisi excepturi reiciendis quis molestias amet tempora sint laboriosam molestiae.</p>
-        </div>
+
       </div>
+
+      <div class="span7 timeline">
+        
+        <% for i in 0..5 %>
+        <div class="post">
+          <div class="username">
+            <img src="/assets/profile.jpg">
+            <p>Sivabudh Umpudh</p> 
+          </div>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+
+        <% end %>
+
+        
+      </div>
+
+
     </div>
     
 
+
+
+
+    
+
   </body>
-</html>
+  </html>
