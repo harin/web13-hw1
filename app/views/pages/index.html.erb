@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Hello</h1>
+    <div class="cover">
+      <img src="p.jpg">
+    </div>
+    <div class="profileImage">
+      <img src="p2.jpg">
+    </div>
+
+    <div class="about">
+      <ul>
+        <li>Background</li>
+        <li>Address</li>
+        <% for u in @user %>
+            <p><%= u.first_name %></p> <br>
+        <% end %>
+      </ul>
+    </div>
+    <div class="timeline">
+      <div class="post">
+        <div class="username">
+          <img src="p2.jpg">
+          <p>Sivabudh Umpudh</p> 
+        </div>
+         <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, provident, quos corrupti labore nihil quo minus aliquam enim maxime eum dolor vitae quam doloremque velit in veniam esse deserunt ratione cum iure vel laudantium temporibus reprehenderit illum assumenda nisi excepturi reiciendis quis molestias amet tempora sint laboriosam molestiae.</p>
+        </div>
+      </div>
+    </div>
+    
+
+  </body>
+</html>

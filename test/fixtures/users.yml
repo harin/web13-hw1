@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  education: 
+  hobby: 
+  birthday: 
+  relationship: 
+
+two:
+  education: 
+  hobby: 
+  birthday: 
+  relationship: 
