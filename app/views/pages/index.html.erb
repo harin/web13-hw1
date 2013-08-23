@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body> -->
 
-  <div class="container">
+<!--   <div class="container">
     <div class="cover">
       <img src="/assets/banner.jpg">
     </div>
@@ -19,40 +19,128 @@
           <ul>
             <li>Background</li>
             <li>Address</li>
-            <% for u in @user %>
-            <p><%= u.first_name %></p> <br>
-            <% end %>
+
           </ul>
         </div>
 
       </div>
 
       <div class="span7 timeline">
-        
-        <% for i in 0..5 %>
-        <div class="post">
-          <div class="username">
-            <img src="/assets/profile.jpg">
-            <p>Sivabudh Umpudh</p> 
-          </div>
-          <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
 
+        <%= form_tag("/test", method: "post", remote:true, class:"new_post") do %>
+        <%= label_tag :content %>
+        <%= text_field_tag(:content) %>
+        <%= submit_tag("Post") %>
         <% end %>
+
+        <ul class="posts_list">
+          <% for post in @posts %>
+          <li class="post">
+            <div class="username">
+              <img src="/assets/profile.jpg">
+              <p>Sivabudh Umpudh</p> 
+            </div>
+            <div class="content">
+              <p><%= post.content %></p>
+            </div>
+          </li>
+
+          <% end %>
+        </ul>
 
         
       </div>
 
 
+    </div> -->
+    
+    <div class="container">
+
+      <!--navbar-->
+      <div class="span9 navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
+            <a href="#" class="brand"><img src="/assets/banner.jpg" width="70px" ></a>
+
+
+            <div class="nav-collapse collapse" id="nav-collapse-01">
+              <ul class="nav">
+                <li class="active">
+                  <a href= "#link">Profile</a>
+                </li>
+                <li>
+                  <a href= "#link">Settings</a>
+                </li>
+                <ul>
+                  <!-- Sub Menu items go here -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
     </div>
-    
+
+
+    <div class="row">
+      <div class="span12" style="position: relative">
+        <div class="cover">
+          <img class="profilePic" src="/assets/profile.jpg"></img>
+        </div>
+      </div>
+      <div class="span10">
+        <p></p>
+      </div>
+    </div>
+
+    <div class ="row">
+      <div class="span3">
+        <div class="popover bottom">
+          <div class="arrow"></div>
+          <h3 class="popover-title">Sivabudh Pac Umpudh</h3>
+          <div class="popover-content">
+            <p>Studied at : ........................................................</p>
+            <p>Hobbies : </p>
+            <p>Birthday : dd/mm/yyyy</p>
+            <p>In Relationship with : xxxxxx</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="span6">        
+        <%= form_tag("/test", method: "post", remote:true, class:"new_post") do %>
+          <%= text_area_tag :content,nil, class:"span12 content", placeholder:"What's on your mind", row:"3" %>
+          <%= submit_tag("Post", class:"btn") %>
+        <% end %>
+        
+          <ul class="posts_list">
+            <% for post in @posts %>
+            <li class="post">
+                <div class= "postHeader" >
+                  <img class= "span1 commentImage" src="/assets/profile.jpg" >
+                  <p>Sivabudh Pac Umpudh</p>
+                </div> 
+                <div class="postContent">
+                  <p >
+                    <%= post.content %>
+                  </p>
+
+                </div>
+            </li>
+            <% end %>
+
+          </ul>
+      </div>
+
+    </div>  
+  </div>
+</div>
 
 
 
 
-    
 
-  </body>
-  </html>
+<!-- </body>
+</html> -->

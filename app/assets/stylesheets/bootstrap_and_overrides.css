@@ -5,3 +5,62 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
+
+  
+.coverPhoto{
+    position: relative;
+  }
+  .profilePic{
+    width: 130px;
+    margin-left: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #D5D5D5;
+    position: absolute;
+    left: 5px;
+    top: 130px;
+  }
+  .commentImage{
+    margin-left: 0px; 
+    width:27px
+  }
+  .postHeader{
+     background-color:#003366; 
+     color: #FFFFFF; 
+     height: 40px; 
+     line-height: 30px
+  }
+  .postContent{
+    
+    line-height: 10px;
+    word-wrap: break-word
+  }
+
+  .postContent p {
+    font-size: 15px;
+    background-color: #D5D5D5
+  }
+  .popover-content{
+    word-wrap: break-word ;
+  }
+  .popover.bottom .arrow{
+    border-bottom-color: #003366
+  }
+  .popover-title{
+  background-color: #003366
+  }
+  .popover.bottom{
+    max-width: 250px; 
+    right: 100px; 
+    display: block; 
+    position: relative
+  }
+  .post{
+    min-width: 500px;
+  }
+  .cover{
+    background-image: url(../assets/banner.jpg);
+    width: 851px;
+    height: 315px
+  }
+

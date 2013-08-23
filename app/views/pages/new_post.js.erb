@@ -1,0 +1,15 @@
+$("textarea.content").val("");
+
+var head =  "<div class='postHeader'>" +
+            "<img src='/assets/profile.jpg' class='span1 commentImage'>"+
+            "<p>Sivabudh Umpudh</p>"+
+          "</div>";
+
+var status = "<li class='post'>" + head +
+          "<div class='postContent'>" +
+          "<p><%= @post.content %></p>" +
+          "</div>"+
+          "</li>";
+
+$("ul.posts_list").prepend(status);
+
