@@ -1,9 +1,7 @@
 production:
   sessions:
     default:
-      database: my_book_production
-      hosts:
-        - ENV['MONGOHQ_URL']
+      uri: <%= ENV['MONGOHQ_URL'] %>
       options:
         consistency: :strong
   options:
