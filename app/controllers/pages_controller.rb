@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index 
-    @users = User.all
+    @user = User.first
     @posts = Post.all.desc(:created_at)
   end
 

@@ -1,91 +1,8 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body> -->
 
-<!--   <div class="container">
-    <div class="cover">
-      <img src="/assets/banner.jpg">
-    </div>
-    <div class="profileImage">
-      <img src="/assets/profile.jpg">
-    </div>
-    <div class="row">
-
-      <div class="span4 profile">
-        <div class="about">
-          <ul>
-            <li>Background</li>
-            <li>Address</li>
-
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="span7 timeline">
-
-        <%= form_tag("/test", method: "post", remote:true, class:"new_post") do %>
-        <%= label_tag :content %>
-        <%= text_field_tag(:content) %>
-        <%= submit_tag("Post") %>
-        <% end %>
-
-        <ul class="posts_list">
-          <% for post in @posts %>
-          <li class="post">
-            <div class="username">
-              <img src="/assets/profile.jpg">
-              <p>Sivabudh Umpudh</p> 
-            </div>
-            <div class="content">
-              <p><%= post.content %></p>
-            </div>
-          </li>
-
-          <% end %>
-        </ul>
-
-        
-      </div>
-
-
-    </div> -->
-    
     <div class="container">
-
       <!--navbar-->
-      <div class="span9 navbar">
-        <div class="navbar-inner">
-          <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
-            <a href="#" class="brand"><img src="/assets/banner.jpg" width="70px" ></a>
-
-
-            <div class="nav-collapse collapse" id="nav-collapse-01">
-              <ul class="nav">
-                <li class="active">
-                  <a href= "#link">Profile</a>
-                </li>
-                <li>
-                  <a href= "#link">Settings</a>
-                </li>
-                <ul>
-                  <!-- Sub Menu items go here -->
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
     <div class="row">
-      <div class="span12" style="position: relative">
+      <div class="span10 offset1" style="position: relative">
         <div class="cover">
           <img class="profilePic" src="/assets/profile.jpg"></img>
         </div>
@@ -96,15 +13,18 @@
     </div>
 
     <div class ="row">
-      <div class="span3">
+      <div class="span3 offset1">
         <div class="popover bottom">
           <div class="arrow"></div>
-          <h3 class="popover-title">Sivabudh Pac Umpudh</h3>
+          <h3 class="popover-title"><%= @user.first_name%> <%= @user.last_name%></h3>
+
           <div class="popover-content">
-            <p>Studied at : ........................................................</p>
-            <p>Hobbies : </p>
-            <p>Birthday : dd/mm/yyyy</p>
-            <p>In Relationship with : xxxxxx</p>
+            <p>Studied at : <%= @user.education %></p>
+            <p>Hobbies : <%= @user.hobby %></p>
+            <p>Birthday : <%= @user.birthday.to_s %></p>
+            <p>In Relationship with : <%= @user.relationship %></p>
+            <%= link_to 'Edit',edit_user_path(@user), class:"btn btn-info btn-mini" %>
+            <p></p>
           </div>
         </div>
       </div>
@@ -123,10 +43,9 @@
                   <p>Sivabudh Pac Umpudh</p>
                 </div> 
                 <div class="postContent">
-                  <p >
+                  <p class="postContent">
                     <%= post.content %>
                   </p>
-
                 </div>
             </li>
             <% end %>
@@ -137,10 +56,3 @@
     </div>  
   </div>
 </div>
-
-
-
-
-
-<!-- </body>
-</html> -->

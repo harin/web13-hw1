@@ -7,7 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#nav-collapse-01"></button>
+            <a href="/" class="brand"><img src="/assets/banner.jpg" width="70px" ></a>
+            <div class="nav-collapse collapse" id="nav-collapse-01">
+              <ul class="nav">
+                <li class="active">
+                  <a href= "#{}">Profile</a>
+                </li>
+                <li>
+                  <a href= "#{}">Settings</a>
+                </li>
+                <ul>
+                  <!-- Sub Menu items go here -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
 
+      </div>
+    </div>
 <%= yield %>
 
 </body>
