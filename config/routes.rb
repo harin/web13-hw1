@@ -3,8 +3,8 @@ MyBook::Application.routes.draw do
 
 
   resources :users
-  get "/test" => "pages#index"
-  post "/test" => "pages#new_post"
+  get "/" => "pages#index"
+  post "/" => "pages#new_post"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
