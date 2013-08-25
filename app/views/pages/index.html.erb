@@ -30,7 +30,7 @@
       </div>
 
       <div class="span6">        
-        <%= form_tag("/test", method: "post", remote:true, class:"new_post") do %>
+        <%= form_tag("/", method: "post", remote:true, class:"new_post") do %>
           <%= text_area_tag :content,nil, class:"span12 content", placeholder:"What's on your mind", row:"3" %>
           <%= submit_tag("Post", class:"btn") %>
         <% end %>
@@ -40,10 +40,10 @@
             <li class="post">
                 <div class= "postHeader" >
                   <img class= "span1 commentImage" src="/assets/profile.jpg" >
-                  <p>Sivabudh Pac Umpudh</p>
+                  <p><%= @user.first_name%> <%= @user.last_name%></p>
                 </div> 
                 <div class="postContent">
-                  <p class="postContent">
+                  <p>
                     <%= post.content %>
                   </p>
                 </div>

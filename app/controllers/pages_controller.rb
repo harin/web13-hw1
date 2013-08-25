@@ -10,11 +10,11 @@ class PagesController < ApplicationController
     @post = Post.create(content:content)
     if @post.save!
         respond_to do |format|
-          format.html { redirect_to '/test' }
+          format.html { redirect_to '/' }
           format.js
         end
     else
-      render json: {fuck: "fuck"}
+      render json: {error: "shit"}
     end
   end
 
