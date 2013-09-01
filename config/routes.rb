@@ -5,6 +5,7 @@ MyBook::Application.routes.draw do
   resources :users
   get "/" => "pages#index"
   post "/" => "pages#new_post"
+  post "/new_comment" => "pages#new_comment"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

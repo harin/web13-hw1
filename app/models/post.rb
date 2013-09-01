@@ -3,4 +3,5 @@ class Post
   include Mongoid::Timestamps
 
   field :content, type: String
+  field :comments, type: Array
 end

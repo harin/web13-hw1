@@ -7,7 +7,7 @@
   */
 
   
-.coverPhoto{
+  .coverPhoto{
     position: relative;
   }
   .profilePic{
@@ -21,46 +21,108 @@
     top: 130px;
   }
   .commentImage{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #D5D5D5;
     margin-left: 0px; 
-    width:27px
+    width: 27px;
+    
   }
   .postHeader{
-     background-color:#003366; 
-     color: #FFFFFF; 
-     height: 40px; 
-     line-height: 30px
-  }
-  .postContent{
-    
-    line-height: 10px;
-    word-wrap: break-word
-  }
+   background-color:#003366; 
+   color: #FFFFFF; 
+   /*height: 40px; */
+   height: 25px;
+   line-height: 30px;
+   font-size: 12px;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
 
-  .postContent p {
-    font-size: 15px;
-    background-color: #D5D5D5
-  }
-  .popover-content{
-    word-wrap: break-word ;
-  }
-  .popover.bottom .arrow{
-    border-bottom-color: #003366
-  }
-  .popover-title{
+ }
+ .postContent{
+  border-top-right-radius: 20px;
+  line-height: 10px;
+  word-wrap: break-word;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom-right-radius: 20px;
+}
+
+.postContent p {
+  font-size: 15px;
+  background-color: #D5D5D5;
+  border-bottom-right-radius: 50px;
+}
+.popover-content{
+  word-wrap: break-word ;
+}
+.popover.bottom .arrow{
+  border-bottom-color: #003366
+}
+.popover-title{
   background-color: #003366
-  }
-  .popover.bottom{
-    max-width: 250px; 
-    right: 100px; 
-    display: block; 
-    position: relative
-  }
-  .post{
-    min-width: 500px;
-  }
-  .cover{
-    background-image: url(../assets/banner.jpg);
-    width: 851px;
-    height: 315px
-  }
+}
+.popover.bottom{
+  max-width: 250px; 
+  right: 100px; 
+  display: block; 
+  position: relative
+}
+.post{
+  min-width: 300px;
+  max-width: 450px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius:15px;
+  background-color: #D4E4DB;
+}
 
+.cover{
+  background-image: url(../assets/banner.jpg);
+  width: 851px;
+  height: 315px
+}
+
+.postName{
+  font-size: 12px; 
+  padding-top: 3px;
+  padding-bottom:3px;
+}
+
+.commentPanelL{
+  background-color: #FFFFFF
+}
+.commentPanelR{
+  background-color: #FFFFFF
+}
+.commentField{
+  font-size: 10px;
+  margin-top: 7px;
+  width: 294px;
+  line-height: 15px
+  
+}
+.separator {
+ background-color: #003366;
+ height: 1px;
+}
+.post img{
+  width: 43px;
+  height: 50px;
+}
+
+button.btn.btn-small {
+  font-size: 12.992px;
+  line-height: 13px;
+  background: #bdc3c7;
+}
+.commentButton{
+  padding-top: 7px;
+  display: inline-block;
+
+}
+.crop{
+  width:40px;
+  height: 40px;
+  margin-left: 0px;
+  overflow: hidden;
+}
